@@ -18,4 +18,6 @@ dependencies {
     implementation "org.koin:koin-android-viewmodel:$koin_version"
 
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leakcanary_version"
+
+    implementation "com.airbnb.android:lottie:$lottie_version"
 }

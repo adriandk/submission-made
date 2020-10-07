@@ -1,5 +1,7 @@
 package com.adrian.submission1
 
+import android.app.SearchManager
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -7,14 +9,14 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import androidx.appcompat.widget.SearchView
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.adrian.core.data.Resource
 import com.adrian.core.ui.RestoranAdapter
 import com.adrian.submission1.detail.DetailActivity
 import com.adrian.submission1.home.HomeViewModel
-import kotlinx.android.synthetic.main.activity_main.home_list
-import kotlinx.android.synthetic.main.activity_main.progress_bar
+import kotlinx.android.synthetic.main.activity_main.*
 import org.koin.android.viewmodel.ext.android.viewModel
 
 class MainActivity : AppCompatActivity() {
@@ -35,16 +37,18 @@ class MainActivity : AppCompatActivity() {
                 startActivity(intent)
             }
 
-            homeViewModel.restoran.observe(this, Observer { restoran ->
+            homeViewModel.restoran.observe(this, { restoran ->
                 if (restoran != null) {
                     when (restoran) {
                         is Resource.Loading -> progress_bar.visibility = View.VISIBLE
                         is Resource.Success -> {
-                            progress_bar.visibility = View.GONE
                             restoranAdapter.setData(restoran.data)
+                            progress_bar.visibility = View.GONE
+                            error.visibility = View.GONE
                         }
                         is Resource.Error -> {
                             progress_bar.visibility = View.GONE
+                            error.visibility = View.VISIBLE
                         }
                     }
                 }

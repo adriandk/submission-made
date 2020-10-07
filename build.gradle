@@ -32,6 +32,8 @@ buildscript {
 
     ext.leakcanary_version = "2.4"
 
+    ext.lottie_version = "3.4.1"
+
     repositories {
         google()
         jcenter()
