@@ -1,6 +1,5 @@
 package com.adrian.submission1.detail
 
-import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
