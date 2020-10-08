@@ -1,16 +1,12 @@
 package com.adrian.submission1
 
-import android.app.SearchManager
-import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import androidx.appcompat.widget.SearchView
-import androidx.lifecycle.Observer
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.adrian.core.data.Resource
 import com.adrian.core.ui.RestoranAdapter
