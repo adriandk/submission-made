@@ -57,10 +57,8 @@
                 android:textColor="@android:color/white"
                 android:layout_below="@id/desc_list"
                 android:layout_marginTop="16dp"
-                android:layout_alignParentRight="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginEnd="8dp"
-                android:layout_marginRight="8dp" />
+                android:layout_marginEnd="8dp" />
 
         </RelativeLayout>
 

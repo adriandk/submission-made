@@ -1,5 +1,6 @@
 package com.adrian.submission1.detail
 
+import android.content.res.Resources
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -52,9 +53,9 @@ class DetailActivity : AppCompatActivity() {
 
     private fun favoriteStatus(statusFavorite: Boolean) {
         if (statusFavorite) {
-            favorite_button.text = "Unfavorite"
+            favorite_button.text = getString(R.string.unFavorite)
         } else {
-            favorite_button.text = "Favorite"
+            favorite_button.text = getString(R.string.favorite)
         }
     }
 
